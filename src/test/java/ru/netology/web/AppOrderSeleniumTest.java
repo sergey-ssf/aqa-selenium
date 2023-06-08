@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppOrderSeleniumTest {
 
-    private WebDriver driver = new ChromeDriver(options);
+    private WebDriver driver;
 
 
     @BeforeAll
@@ -25,7 +25,7 @@ public class AppOrderSeleniumTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
