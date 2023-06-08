@@ -27,6 +27,7 @@ dependencies {
     testImplementation("com.codeborne:selenide:6.13.0")
     implementation("org.slf4j:slf4j-api:1.7.30")
     implementation("ch.qos.logback:logback-classic:1.2.9")
+    testImplementation("io.github.bonigarcia:webdrivermanager:5.3.3")
 }
 
 tasks.test {

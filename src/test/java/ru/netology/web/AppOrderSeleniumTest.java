@@ -4,19 +4,27 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AppOrderSeleniumTest {
-    private WebDriver driver;
+
+    private WebDriver driver = new ChromeDriver(options);
+
 
     @BeforeAll
      static void setUpAll() {
-    // убедитесь, что файл chromedriver.exe расположен именно в каталоге C:\tmp
+    // убедитесь, что файл chromedriver.exe расположен именно в каталоге
         System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
     }
 
     @BeforeEach
     void setUp() {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
         driver = new ChromeDriver();
     }
 
