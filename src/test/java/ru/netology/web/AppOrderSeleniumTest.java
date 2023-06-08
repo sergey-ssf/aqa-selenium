@@ -16,7 +16,8 @@ public class AppOrderSeleniumTest {
     @BeforeAll
      static void setUpAll() {
     // убедитесь, что файл chromedriver.exe расположен именно в каталоге
-        System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
+    //    System.setProperty("webdriver.chrome.driver", "./driver/win/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./driver/linux/chromedriver");
     }
 
     @BeforeEach
